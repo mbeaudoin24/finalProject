@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact Me</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li id="home"><a href="index.html">Home</a></li>
+                <li id="photo"><a href="photography.html">Photography</a></li>
+                <li id="about"><a href="aboutMe.html">About Me</a></li>
+                <li id="contact"><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h1>GET IN TOUCH</h2>
+                <input type="text" id="name" placeholder="Your name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="phone" id="phone" placeholder="Phone Number" required>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footerContent">
+        <p>&copy Michael Beaudoin</p>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "mbeaudoin029@gmail.com",
+                Password : "Herbie246",
+                To : 'mbeaudoin029@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form From Website",
+                Body : "And this is the body"
+            }).then(
+            message => alert("Message sent Successfully")
+            );
+        }
+    </script>
+</body>
+</html>

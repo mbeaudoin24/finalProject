@@ -1,0 +1,331 @@
+/* Experience page style sheet */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+*img{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+.skip a{
+    position: absolute;
+    top: -40px;
+}
+
+.skip a:focus {
+    position: absolute;
+    top: 20px;
+}
+
+#photo{
+    padding: 10px;
+    border: black solid;
+    background-color: #67e8d3;
+ }
+
+@media only screen and (min-width: 400px){
+    .navbar{
+        width: 100%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .navbar ul li{
+        list-style: none;
+        display: inline-block;
+        justify-content: center;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    img{
+        max-height: 500px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 500px;
+        grid-template-rows: repeat(9,500px) auto;
+    }
+
+}
+
+
+@media only screen and (min-width: 900px){
+
+    .navbar{
+        width: 100%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+    }
+
+    .navbar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #67e8d3;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.75s;
+    }
+
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+
+    .navbar ul li a{
+        text-decoration: none;
+        color: black;
+    }
+
+    img{
+        max-height: 500px;
+    }
+
+    .container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 500px 500px 500px 500px auto;
+    gap: 0;
+    }
+    .item5{
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 0;
+        grid-row-end: 1;
+
+        height: 500px;
+    }
+    .item6 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 0;
+        grid-row-end: 1;
+
+        height: 500px;
+    }
+
+    .item3 {
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .item4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .item1 {
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .item2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .item7 {
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .item8{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .item9{
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    .item10{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .navbar{
+        width: 100%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .navbar ul li{
+        list-style: none;
+        display: inline-block;
+        justify-content: center;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #67e8d3;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.75s;
+    }
+    
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+    
+    .navbar ul li a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    img{
+        max-height: 500px;
+    }
+    
+    .container {
+     display: grid;
+     grid-template-columns: 500px 500px 500px;
+     grid-template-rows: 500px 500px auto;
+     gap: 0;
+    }
+
+    .item1{
+        grid-row-start: 0 ;
+        grid-row-end: 1;
+        grid-column-start: 0;
+        grid-column-end: 1;
+    }
+    .item2{
+        grid-row-start: 0 ;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .item3{
+        grid-row-start: 0 ;
+        grid-row-end: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .item4{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 0;
+        grid-column-end: 1;
+    }
+    .item5{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .item6{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .item7{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 0;
+        grid-column-end: 1;
+    }
+    .item8{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .item9{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+
+    .item10{
+        display: none;
+    }
+}
+
+.footerContent{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background-color: black;
+}
+
+.footerContent p{
+    color: white;
+}
